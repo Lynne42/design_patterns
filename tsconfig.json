@@ -1,0 +1,28 @@
+{
+  "ts-node": { 
+      "esm": true,
+      "experimentalSpecifierResolution": "node" 
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["src/**/*", "config/**/*", "typings.d.ts"],
+  "exclude": [
+    "node_modules",
+  ],
+}
