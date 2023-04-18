@@ -1,25 +1,23 @@
 import SubScriber from './subscriber';
 
-export type SubScribers = SubScriber[];
-
+export type SubScribers = Map<string, SubScriber>;
 
 class Publisher {
-  public subScribers: SubScribers = [];
+  public subScribers: SubScribers = new Map();
 
-  subscriber(s: SubScriber) {
-    this.subScribers.push(s);
+  subscriber(type: string, s: SubScriber) {
+    this.subScribers.set(type, s);
   }
 
-  unSubScriber(s: SubScriber) {
-
+  unSubScriber(type: string, s: SubScriber) {
+    this.subScribers.delete(type);
   }
 
   notifuSubScribers(data: any) {
-    this.subScribers.forEach((subScribers: SubScriber) => {
-      subScribers.update(data);
-    })
+    for (let subScriber of this.subScribers.values()) {
+      subScriber.update(data)
+    }
   }
-
 }
 
 export default Publisher;

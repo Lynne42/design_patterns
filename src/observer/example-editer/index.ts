@@ -8,8 +8,8 @@ import Editer from './editer';
 function exampleEditer() {
   // 注册观察者
   const publish = new Publisher();
-  publish.subscriber(new EmailObserver());
-  publish.subscriber(new LogObserver());
+  publish.subscriber('emailObserver', new EmailObserver('emailObserver'));
+  publish.subscriber('logObserver', new LogObserver('logObserver'));
 
   const edit = new Editer(publish);
 
