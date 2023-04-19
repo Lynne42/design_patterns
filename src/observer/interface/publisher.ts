@@ -2,7 +2,7 @@ import SubScriber from './subscriber';
 
 export type SubScribers = Map<string, SubScriber>;
 
-class Publisher {
+abstract class Publisher {
   public subScribers: SubScribers = new Map();
 
   subscriber(type: string, s: SubScriber) {
@@ -13,11 +13,7 @@ class Publisher {
     this.subScribers.delete(type);
   }
 
-  notifuSubScribers(data: any) {
-    for (let subScriber of this.subScribers.values()) {
-      subScriber.update(data)
-    }
-  }
+  notifuSubScribers() {}
 }
 
 export default Publisher;
