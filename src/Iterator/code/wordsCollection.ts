@@ -4,6 +4,10 @@ import AlphabeticalOrderIterator from './alphabeticalOrderIterator';
 export default class WordsCollection implements Collection {
   private items: string[] = [];
 
+  constructor(data: string[]) {
+    this.items = data;
+  }
+
   public getItems(): string[] {
     return this.items;
   }
