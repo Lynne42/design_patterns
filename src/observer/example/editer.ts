@@ -1,10 +1,11 @@
 import Publisher from '../interface/publisher';
 
-class Editer {
+class Editer extends Publisher {
   pulisher: Publisher;
   content: string = '';
 
   constructor(pulisher: Publisher) {
+    super();
     this.pulisher = pulisher;
   }
 

@@ -1,5 +1,5 @@
 
-import exampleEditer from './example-editer/index';
+import exampleEditer from './example/index';
 
 
 /**

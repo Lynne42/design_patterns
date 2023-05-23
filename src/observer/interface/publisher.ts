@@ -13,7 +13,7 @@ abstract class Publisher {
     this.subScribers.delete(type);
   }
 
-  notifuSubScribers() {}
+  notifuSubScribers(data: any) {}
 }
 
 export default Publisher;
