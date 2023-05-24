@@ -1,11 +1,16 @@
-# run
+# 运行项目
 
 ```
 # example run observer/：
 npx ts-node ./src/observer/index.ts
 ```
 
-# js2flowchart 代码转可视化流程图
+# 运行测试
+```
+npm run test
+```
+
+# 代码转可视化流程图,js2flowchart 
 
 ```
 # example
